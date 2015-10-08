@@ -1,8 +1,10 @@
 # About
 
-This repository stores php code used to communicate with [VIVO](http://github.com/vivo-project/vivo) in order to generate "business cards" displayed by the wordpress.
+This repository stores php code used to communicate with
+[VIVO](http://github.com/vivo-project/vivo) in order to generate "business
+cards" displayed by the wordpress.
 
-Examples:
+Examples of live wordpress pages:
 
 * http://www.ctsi.ufl.edu/about/management/clinical-research-unit-directors/
 * http://www.ctsi.ufl.edu/about/management/program-directors/
@@ -11,32 +13,11 @@ Examples:
 
 # Installation
 
-Please read the instructions in [INSTALL.md](INSTALL.md)
+Please read te instructions listed in [INSTALL.md](INSTALL.md) file in order
+to enable your wordpress instance to use the php code in this repository.
 
-Process:
 
-Inside the wp page there are calls that look like the following:
+# Contributing
 
-[vivo]http://vivo.ufl.edu/individual/n23877[/vivo]<!-- Batich, Chris -->
-[vivo]http://vivo.ufl.edu/individual/n106202[/vivo]<!-- Beltz, Susan -->
-[vivo]http://vivo.ufl.edu/individual/n29435[/vivo]<!-- Brantly, Mark -->
-
-This in turn makes a call to functions.php which is stored in
-/var/www/portal/wp-content/themes/UFandShands/functions.php
-
-Within functions.php is the following function:
-
-function getvivoperson($atts, $content = null) {
-        ob_start();
-        getVIVOPersonData($content);
-        $result = ob_get_contents();
-        ob_end_clean();
-        return $result;
-        }
-add_shortcode('vivo','getvivoperson');
-
-The call to getVivoPersonData passes the URI to
-/var/www/portal/wp-content/themes/UFandShands/vivo/vivo.php
-
-This is then passed to vivo_card.php that runs the sparql query
-and parses the return data.
+Please fork the repository and send us pull requests against the "develop"
+branch.
