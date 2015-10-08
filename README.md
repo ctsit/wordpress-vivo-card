@@ -1,8 +1,6 @@
 # About
 
-This repository stores php code used to communicate
-with [VIVO](http://github.com/vivo-project/vivo) in order to generate "business cards"
-displayed by the wordpress.
+This repository stores php code used to communicate with [VIVO](http://github.com/vivo-project/vivo) in order to generate "business cards" displayed by the wordpress.
 
 Examples:
 
