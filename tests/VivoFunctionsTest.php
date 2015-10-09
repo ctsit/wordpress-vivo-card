@@ -7,7 +7,6 @@
 //  or
 //  make test
 
-// require_once '../vivo.php';
 require_once 'vivo.php';
 require_once 'vivo_card.php';
 
