@@ -1,6 +1,6 @@
 
 test:
-	phpunit --color tests/VivoFunctionsTest.php
+	phpunit --color tests/
 
 install_phpunit:
 	wget https://phar.phpunit.de/phpunit.phar
