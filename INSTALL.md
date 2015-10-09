@@ -1,14 +1,23 @@
 # Installation
 
-Archive and scp the tar.gz file to the target server:
+Clone the repo to the right location on the target server:
 
 <pre>
-tar cvzf vc.tar.gz wordpress-vivo-card/
-scp vc.tar.gz test.ctsi.ufl.edu:/home/asura/
 ssh test.ctsi.ufl.edu
-tar xvzf vc.tar.gz
-mv wordpress-vivo-card /var/www/vivo
+mv /var/www/vivo /var/www/vivo_backup
+git clone https://github.com/ctsit/wordpress-vivo-card.git /var/www/vivo
+</pre>
+
+Create a soft link so wordpress can access the code:
+
+<pre>
 ln -s /var/www/vivo /var/www/portal/wp-content/themes/UFandShands/vivo
+</pre>
+
+Test if the page is loading:
+
+<pre>
+curl -ks http://test.ctsi.ufl.edu/about/management/clinical-research-unit-directors/ | grep -i vivoName | head -1
 </pre>
 
 
