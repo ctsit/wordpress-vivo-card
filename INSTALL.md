@@ -5,7 +5,14 @@ Clone the repo to the right location on the target server:
 <pre>
 ssh test.ctsi.ufl.edu
 mv /var/www/vivo /var/www/vivo_backup
+
+# clone the latest version of the code:
 git clone https://github.com/ctsit/wordpress-vivo-card.git /var/www/vivo
+
+# or download a specific version archive file:
+wget https://github.com/ctsit/wordpress-vivo-card/archive/0.0.2.tar.gz
+tar xvzf 0.0.2.tar.gz
+mv wordpress-vivo-card /var/www/vivo
 </pre>
 
 Create a soft link so wordpress can access the code:
